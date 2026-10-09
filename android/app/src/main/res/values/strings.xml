@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Big Win Trophy Lines</string>
+
+    <string name="splash_title_top">BIG WIN</string>
+    <string name="splash_title_bottom">TROPHY LINES</string>
+    <string name="splash_subtitle">CONNECT THE AWARDS</string>
+    <string name="splash_loading">PREPARING THE TROPHY CASE</string>
+
+    <string name="menu_wordmark">BIG WIN TROPHY LINES</string>
+    <string name="btn_play">PLAY</string>
+    <string name="menu_eyebrow">NEXT CEREMONY</string>
+    <string name="menu_level_format">LEVEL %1$d</string>
+    <string name="menu_points_format">%1$d TP</string>
+    <string name="menu_stat_streak">BEST STREAK</string>
+    <string name="menu_stat_level">LEVEL</string>
+    <string name="menu_stat_trophies">TROPHIES</string>
+    <string name="menu_trophies_format">%1$d/%2$d</string>
+    <string name="menu_map_eyebrow">GALLERY MAP</string>
+    <string name="menu_map_title">AWARD NIGHTS</string>
+    <string name="menu_hint">TAP A TROPHY, THEN TAP THE CELLS TO ITS TWIN</string>
+
+    <string name="game_title_format">LEVEL %1$d · %2$s</string>
+    <string name="game_moves_format">MOVES %1$d</string>
+    <string name="game_pairs_format">%1$d OF %2$d PAIRS CONNECTED</string>
+    <string name="game_hint_idle">TAP A TROPHY TO BEGIN</string>
+    <string name="game_hint_drawing">TAP THE NEXT CELL TOWARDS THE TWIN</string>
+    <string name="game_hint_closed">PAIR SECURED · KEEP GOING</string>
+    <string name="game_board_unavailable">BOARD UNAVAILABLE</string>
+    <string name="btn_retry">RETRY</string>
+    <string name="btn_undo">UNDO</string>
+    <string name="btn_hint">HINT</string>
+    <string name="btn_reset">RESET</string>
+    <string name="game_no_hints">NO HINTS LEFT</string>
+    <string name="game_hints_format">%1$d</string>
+
+    <string name="over_victory_title">BIG WIN!</string>
+    <string name="over_called_title">ROUND CLOSED</string>
+    <string name="over_victory_caption">THE TROPHY CASE IS COMPLETE</string>
+    <string name="over_called_caption">THE CEREMONY RAN OUT OF TIME</string>
+    <string name="over_eyebrow">RESULT</string>
+    <string name="over_stat_pairs">PAIRS</string>
+    <string name="over_stat_moves">MOVES</string>
+    <string name="over_stat_points">POINTS</string>
+    <string name="over_pairs_format">%1$d/%2$d</string>
+    <string name="over_points_format">+%1$d</string>
+    <string name="btn_play_again">TRY AGAIN</string>
+    <string name="btn_menu">MENU</string>
+
+    <string name="gallery_title">TROPHY GALLERY</string>
+    <string name="gallery_eyebrow">COLLECTION</string>
+    <string name="gallery_locked">LOCKED</string>
+    <string name="btn_close">CLOSE</string>
+    <string name="settings_title">SETTINGS</string>
+    <string name="settings_eyebrow">CEREMONY</string>
+    <string name="settings_sound">SOUND CUES</string>
+    <string name="settings_haptics">HAPTIC TICKS</string>
+    <string name="settings_contrast">HIGH CONTRAST LINES</string>
+    <string name="btn_reset_progress">RESET PROGRESS</string>
+    <string name="btn_reset_confirm">TAP AGAIN TO CONFIRM</string>
+
+    <string name="cd_back">Back</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_emblem">Big Win Trophy Lines emblem</string>
+    <string name="cd_board">Trophy case puzzle board</string>
+    <string name="cd_hero_trophy">Golden trophy award</string>
+    <string name="cd_streak_icon">Ruby star</string>
+    <string name="cd_trophies_icon">Royal crown</string>
+    <string name="cd_play_icon">Azure cup</string>
+    <string name="cd_points_icon">Golden trophy</string>
+    <string name="cd_gallery_icon">Rose ribbon</string>
+    <string name="cd_trophy_slot">Trophy slot</string>
+    <string name="cd_node_format">Level %1$d, %2$s</string>
+    <string name="state_locked">locked</string>
+    <string name="state_current">next up</string>
+    <string name="state_cleared">cleared</string>
+    <string name="state_pairs_format">%1$d of %2$d pairs connected</string>
+    <string name="state_on">on</string>
+    <string name="state_off">off</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_surface"
+    android:padding="@dimen/spacing_m">
+
+    <ImageView
+        android:id="@+id/gallery_header_icon"
+        android:layout_width="@dimen/sprite_tile"
+        android:layout_height="@dimen/sprite_tile"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/spacing_xs"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:contentDescription="@string/cd_gallery_icon"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_ribbon_rose" />
+
+    <com.bigwintrophy.lines.core.ui.SectionHeaderView
+        android:id="@+id/gallery_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_s"
+        android:layout_toEndOf="@id/gallery_header_icon"
+        android:orientation="horizontal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery_list"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/gallery_header"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:clipToPadding="false" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gallery_close"
+        style="@style/Widget.App.Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_secondary_height"
+        android:layout_below="@id/gallery_list"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/btn_close" />
+
+</RelativeLayout>

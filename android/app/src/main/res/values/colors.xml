@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy_900">#0F1826</color>
+    <color name="navy_850">#131E31</color>
+    <color name="navy_800">#16233A</color>
+    <color name="navy_700">#1E2F4C</color>
+    <color name="navy_600">#2B3A52</color>
+    <color name="award_red">#D8324E</color>
+    <color name="award_red_dark">#A3203A</color>
+    <color name="trophy_gold">#F6BD32</color>
+    <color name="trophy_gold_soft">#FFD98A</color>
+    <color name="line_azure">#2878C8</color>
+    <color name="text_primary">#FFF7EC</color>
+    <color name="text_secondary">#BFCADA</color>
+    <color name="text_muted">#8FA3BF</color>
+    <color name="pair_mint">#4FD1A5</color>
+    <color name="pair_violet">#B38CF0</color>
+    <color name="pair_amber">#FF8A3D</color>
+    <color name="splash_mid">#1B1023</color>
+    <color name="splash_end">#2A0E1A</color>
+    <color name="gold_ripple">#33F6BD32</color>
+    <color name="gold_stroke">#55F6BD32</color>
+    <color name="light_stroke">#33FFF7EC</color>
+    <color name="board_fill">#CC16233A</color>
+    <color name="board_grid">#332878C8</color>
+    <color name="surface_card">#F21E2F4C</color>
+    <color name="surface_card_soft">#E61E2F4C</color>
+    <color name="scrim_top">#CC0F1826</color>
+    <color name="scrim_mid">#990F1826</color>
+    <color name="scrim_bottom">#E60F1826</color>
+    <color name="menu_scrim_top">#B30F1826</color>
+    <color name="menu_scrim_bottom">#730F1826</color>
+    <color name="game_scrim_top">#D90F1826</color>
+    <color name="game_scrim_bottom">#B30F1826</color>
+    <color name="gloss_white">#1AFFFFFF</color>
+    <color name="transparent_black">#00000000</color>
+</resources>

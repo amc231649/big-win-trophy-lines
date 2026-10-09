@@ -1,0 +1,59 @@
+{
+  "assets": [
+    {
+      "name": "icon_1024",
+      "type": "icon",
+      "prompt": "App icon, one single glossy 3D gold trophy cup with a deep red ribbon around its base, strong rim light, centered, deep navy radial gradient background warming to dark maroon at the edge, crisp, no text, no other objects"
+    },
+    {
+      "name": "bg_splash",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile game loader background, dark award ceremony studio, deep navy and maroon diagonal gradient, soft red stage haze, faint gold light streaks from above, cinematic, very dark and moody, no text, no UI elements"
+    },
+    {
+      "name": "bg_menu",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile game menu background, glossy award show stage, deep navy backdrop with award red panels and polished gold trim, retro futurism Y2K chrome highlights, vibrant, 3D render, no text, no UI elements"
+    },
+    {
+      "name": "bg_game",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile game background, soft blurred dark navy trophy case interior, faint azure cable glow, very low contrast for UI overlay, smooth, no text, no UI elements"
+    },
+    {
+      "name": "sprite_logo_emblem",
+      "type": "sprite",
+      "prompt": "One single glossy 3D gold laurel emblem badge with a red enamel center, centered icon, award show style, crisp rim light, isolated on plain white, no other objects, no text"
+    },
+    {
+      "name": "sprite_trophy_gold",
+      "type": "sprite",
+      "prompt": "One single glossy 3D golden trophy cup with two handles, centered icon, polished metallic gold, soft studio reflection, isolated on plain white, no other objects, no text"
+    },
+    {
+      "name": "sprite_medal_silver",
+      "type": "sprite",
+      "prompt": "One single glossy 3D silver award medal on a short blue ribbon, centered icon, polished chrome finish, isolated on plain white, no other objects, no text"
+    },
+    {
+      "name": "sprite_star_ruby",
+      "type": "sprite",
+      "prompt": "One single glossy 3D ruby red five pointed star gem, centered icon, deep red glass with gold rim, isolated on plain white, no other objects, no text"
+    },
+    {
+      "name": "sprite_crown_royal",
+      "type": "sprite",
+      "prompt": "One single glossy 3D royal gold crown with violet gems, centered icon, polished metallic finish, isolated on plain white, no other objects, no text"
+    },
+    {
+      "name": "sprite_cup_azure",
+      "type": "sprite",
+      "prompt": "One single glossy 3D azure blue award cup with a chrome base, centered icon, bright blue enamel, isolated on plain white, no other objects, no text"
+    },
+    {
+      "name": "sprite_ribbon_rose",
+      "type": "sprite",
+      "prompt": "One single glossy 3D rose pink award rosette ribbon with a gold center disc, centered icon, satin finish, isolated on plain white, no other objects, no text"
+    }
+  ]
+}

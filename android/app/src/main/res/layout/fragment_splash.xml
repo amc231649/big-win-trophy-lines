@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_900">
+
+    <ImageView
+        android:id="@+id/splash_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/splash_scrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/scrim_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/splash_chevron_one"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        android:alpha="0.10"
+        android:background="@drawable/chevron_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <View
+        android:id="@+id/splash_chevron_two"
+        android:layout_width="160dp"
+        android:layout_height="2dp"
+        android:alpha="0.10"
+        android:background="@drawable/chevron_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.30" />
+
+    <View
+        android:id="@+id/splash_chevron_three"
+        android:layout_width="268dp"
+        android:layout_height="2dp"
+        android:alpha="0.10"
+        android:background="@drawable/chevron_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74" />
+
+    <View
+        android:id="@+id/splash_ring"
+        android:layout_width="@dimen/sprite_emblem"
+        android:layout_height="@dimen/sprite_emblem"
+        android:alpha="0.35"
+        android:background="@drawable/ring_gold"
+        app:layout_constraintBottom_toBottomOf="@id/splash_emblem"
+        app:layout_constraintEnd_toEndOf="@id/splash_emblem"
+        app:layout_constraintStart_toStartOf="@id/splash_emblem"
+        app:layout_constraintTop_toTopOf="@id/splash_emblem" />
+
+    <ImageView
+        android:id="@+id/splash_emblem"
+        android:layout_width="@dimen/sprite_emblem"
+        android:layout_height="@dimen/sprite_emblem"
+        android:contentDescription="@string/cd_emblem"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_logo_emblem"
+        app:layout_constraintBottom_toTopOf="@id/splash_title_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/splash_title_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_l"
+        android:text="@string/splash_title_top"
+        android:textAppearance="@style/TextAppearance.App.Display"
+        app:layout_constraintBottom_toTopOf="@id/splash_title_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_emblem" />
+
+    <TextView
+        android:id="@+id/splash_title_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:letterSpacing="0.22"
+        android:text="@string/splash_title_bottom"
+        android:textAppearance="@style/TextAppearance.App.Headline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_title_top" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/splash_progress"
+        android:layout_width="@dimen/progress_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:indeterminate="true"
+        app:indicatorColor="@color/award_red"
+        app:layout_constraintBottom_toTopOf="@id/splash_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/navy_700"
+        app:trackCornerRadius="3dp"
+        app:trackThickness="@dimen/progress_height" />
+
+    <TextView
+        android:id="@+id/splash_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_s"
+        android:letterSpacing="0.30"
+        android:text="@string/splash_subtitle"
+        android:textAppearance="@style/TextAppearance.App.Label"
+        app:layout_constraintBottom_toTopOf="@id/splash_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/splash_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_xl"
+        android:accessibilityLiveRegion="polite"
+        android:alpha="0.7"
+        android:text="@string/splash_loading"
+        android:textAppearance="@style/TextAppearance.App.Label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/card_radius" />
+            <gradient
+                android:angle="315"
+                android:endColor="@color/award_red_dark"
+                android:startColor="@color/award_red"
+                android:type="linear" />
+            <stroke
+                android:width="@dimen/stroke_hairline"
+                android:color="@color/gold_stroke" />
+        </shape>
+    </item>
+    <item android:bottom="90dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/card_radius" />
+            <gradient
+                android:angle="270"
+                android:endColor="@color/transparent_black"
+                android:startColor="@color/gloss_white"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

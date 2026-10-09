@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_900">
+
+    <ImageView
+        android:id="@+id/menu_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/menu_scrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/scrim_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/menu_top_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/header_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/screen_margin"
+        android:paddingEnd="@dimen/spacing_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/menu_wordmark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:letterSpacing="0.08"
+            android:maxLines="2"
+            android:text="@string/menu_wordmark"
+            android:textAppearance="@style/TextAppearance.App.Title"
+            android:textSize="15sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu_points_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/spacing_s"
+            app:cardBackgroundColor="@color/surface_card"
+            app:cardCornerRadius="@dimen/badge_radius"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/gold_stroke"
+            app:strokeWidth="@dimen/stroke_hairline">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/spacing_s"
+                android:paddingEnd="@dimen/spacing_m">
+
+                <ImageView
+                    android:id="@+id/menu_points_icon"
+                    android:layout_width="@dimen/sprite_badge"
+                    android:layout_height="@dimen/sprite_badge"
+                    android:contentDescription="@string/cd_points_icon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sprite_trophy_gold" />
+
+                <TextView
+                    android:id="@+id/menu_points_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:accessibilityLiveRegion="polite"
+                    android:textAppearance="@style/TextAppearance.App.Title"
+                    android:textColor="@color/trophy_gold"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_settings"
+            style="@style/Widget.App.Button.Icon"
+            android:layout_width="@dimen/touch_min"
+            android:layout_height="@dimen/touch_min"
+            android:contentDescription="@string/cd_settings"
+            app:icon="@drawable/ic_settings" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/screen_margin"
+        android:paddingEnd="@dimen/screen_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_top_bar">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu_ceremony_card"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            style="@style/Widget.App.Card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/spacing_m"
+                android:paddingEnd="@dimen/spacing_m">
+
+                <ImageView
+                    android:id="@+id/menu_ceremony_icon"
+                    android:layout_width="@dimen/sprite_node"
+                    android:layout_height="@dimen/sprite_node"
+                    android:contentDescription="@string/cd_gallery_icon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sprite_ribbon_rose" />
+
+                <com.bigwintrophy.lines.core.ui.SectionHeaderView
+                    android:id="@+id/menu_ceremony_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_m"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:appEyebrow="@string/menu_eyebrow" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/menu_stats_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stat_tile_height"
+            android:layout_marginTop="@dimen/gutter"
+            android:orientation="horizontal">
+
+            <com.bigwintrophy.lines.core.ui.StatCardView
+                android:id="@+id/menu_stat_level"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/card_surface"
+                app:appAccent="@color/trophy_gold"
+                app:appIcon="@drawable/sprite_star_ruby"
+                app:appIconDescription="@string/cd_streak_icon"
+                app:appLabel="@string/menu_stat_level" />
+
+            <com.bigwintrophy.lines.core.ui.StatCardView
+                android:id="@+id/menu_stat_trophies"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/gutter"
+                android:layout_weight="1"
+                android:background="@drawable/card_surface"
+                app:appAccent="@color/line_azure"
+                app:appIcon="@drawable/sprite_crown_royal"
+                app:appIconDescription="@string/cd_trophies_icon"
+                app:appLabel="@string/menu_stat_trophies" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/menu_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_m"
+            android:gravity="center_horizontal"
+            android:text="@string/menu_hint"
+            android:textAppearance="@style/TextAppearance.App.Body"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu_play_tile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hero_tile_height"
+            android:layout_marginTop="@dimen/spacing_s"
+            app:cardBackgroundColor="@color/award_red"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:cardElevation="@dimen/elevation_card"
+            app:strokeColor="@color/gold_stroke"
+            app:strokeWidth="@dimen/stroke_hairline">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tile_play_gradient"
+                android:importantForAccessibility="no" />
+
+            <ImageView
+                android:id="@+id/menu_play_sprite"
+                android:layout_width="@dimen/sprite_cup"
+                android:layout_height="@dimen/sprite_cup"
+                android:layout_gravity="top|start"
+                android:layout_margin="@dimen/spacing_m"
+                android:contentDescription="@string/cd_play_icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sprite_cup_azure" />
+
+            <TextView
+                android:id="@+id/menu_level_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/spacing_m"
+                android:textAppearance="@style/TextAppearance.App.Label"
+                android:textColor="@color/trophy_gold_soft" />
+
+            <TextView
+                android:id="@+id/menu_level_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="@dimen/spacing_m"
+                android:layout_marginTop="86dp"
+                android:layout_marginEnd="@dimen/spacing_m"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.App.Title"
+                android:textColor="@color/text_primary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_play_button"
+                style="@style/Widget.App.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_primary_height"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/spacing_m"
+                android:text="@string/btn_play"
+                app:backgroundTint="@color/navy_900"
+                app:icon="@drawable/ic_play" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu_map_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/map_strip_height"
+            android:layout_marginTop="@dimen/spacing_m"
+            app:cardBackgroundColor="@color/surface_card_soft"
+            app:cardCornerRadius="@dimen/tile_radius"
+            app:cardElevation="6dp"
+            app:strokeColor="@color/light_stroke"
+            app:strokeWidth="@dimen/stroke_hairline">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menu_level_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/spacing_m"
+                android:paddingTop="@dimen/spacing_s"
+                android:paddingEnd="@dimen/spacing_m"
+                android:paddingBottom="@dimen/spacing_s" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

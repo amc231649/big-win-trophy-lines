@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatCardView">
+        <attr name="appIcon" format="reference" />
+        <attr name="appValue" format="string" />
+        <attr name="appLabel" format="string" />
+        <attr name="appAccent" format="color" />
+        <attr name="appIconDescription" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SectionHeaderView">
+        <attr name="appEyebrow" format="string" />
+        <attr name="appTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LevelNodeView">
+        <attr name="appNodeIndex" format="integer" />
+    </declare-styleable>
+</resources>

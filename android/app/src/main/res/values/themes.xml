@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BigWinTrophyLines" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/award_red</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorPrimaryContainer">@color/award_red_dark</item>
+        <item name="colorOnPrimaryContainer">@color/text_primary</item>
+        <item name="colorSecondary">@color/trophy_gold</item>
+        <item name="colorOnSecondary">@color/navy_900</item>
+        <item name="colorSecondaryContainer">@color/navy_700</item>
+        <item name="colorOnSecondaryContainer">@color/trophy_gold</item>
+        <item name="colorTertiary">@color/line_azure</item>
+        <item name="colorOnTertiary">@color/text_primary</item>
+        <item name="colorSurface">@color/navy_700</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/navy_600</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/gold_stroke</item>
+        <item name="colorError">@color/award_red</item>
+        <item name="android:colorBackground">@color/navy_900</item>
+        <item name="android:windowBackground">@drawable/bg_window_splash</item>
+        <item name="android:statusBarColor">@color/navy_900</item>
+        <item name="android:navigationBarColor">@color/navy_900</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

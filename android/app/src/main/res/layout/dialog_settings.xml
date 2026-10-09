@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_surface"
+    android:padding="@dimen/spacing_m">
+
+    <com.bigwintrophy.lines.core.ui.SectionHeaderView
+        android:id="@+id/settings_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/settings_sound"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_min"
+        android:layout_below="@id/settings_header"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/settings_sound"
+        android:textAppearance="@style/TextAppearance.App.Body"
+        android:textColor="@color/text_primary" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/settings_haptics"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_min"
+        android:layout_below="@id/settings_sound"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:text="@string/settings_haptics"
+        android:textAppearance="@style/TextAppearance.App.Body"
+        android:textColor="@color/text_primary" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/settings_contrast"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_min"
+        android:layout_below="@id/settings_haptics"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:text="@string/settings_contrast"
+        android:textAppearance="@style/TextAppearance.App.Body"
+        android:textColor="@color/text_primary" />
+
+    <View
+        android:id="@+id/settings_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stroke_hairline"
+        android:layout_below="@id/settings_contrast"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:background="@color/light_stroke"
+        android:importantForAccessibility="no" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings_reset"
+        style="@style/Widget.App.Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_secondary_height"
+        android:layout_below="@id/settings_divider"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:text="@string/btn_reset_progress" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings_close"
+        style="@style/Widget.App.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_primary_height"
+        android:layout_below="@id/settings_reset"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:text="@string/btn_close" />
+
+</RelativeLayout>

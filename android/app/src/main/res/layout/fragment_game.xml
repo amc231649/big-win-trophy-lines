@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_900">
+
+    <ImageView
+        android:id="@+id/game_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/game_scrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/scrim_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/game_header"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/game_header_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/spacing_s"
+        android:paddingEnd="@dimen/spacing_m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/game_back"
+            style="@style/Widget.App.Button.Icon"
+            android:layout_width="@dimen/touch_min"
+            android:layout_height="@dimen/touch_min"
+            android:contentDescription="@string/cd_back"
+            app:icon="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/game_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.App.Title"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/game_moves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:accessibilityLiveRegion="polite"
+            android:textAppearance="@style/TextAppearance.App.Title"
+            android:textColor="@color/trophy_gold"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <com.bigwintrophy.lines.core.ui.TrophyBoardView
+        android:id="@+id/game_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:layout_marginEnd="@dimen/spacing_m"
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:contentDescription="@string/cd_board"
+        app:layout_constraintBottom_toTopOf="@id/game_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_header" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/game_error_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/navy_700"
+        app:cardCornerRadius="@dimen/tile_radius"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/game_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/game_board"
+        app:strokeColor="@color/gold_stroke"
+        app:strokeWidth="@dimen/stroke_hairline">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_l">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_board_unavailable"
+                android:textAppearance="@style/TextAppearance.App.Title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_retry"
+                style="@style/Widget.App.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_secondary_height"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:text="@string/btn_retry" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/game_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/spacing_s"
+        android:accessibilityLiveRegion="polite"
+        android:gravity="center_horizontal"
+        android:text="@string/game_hint_idle"
+        android:textAppearance="@style/TextAppearance.App.Label"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintBottom_toTopOf="@id/game_pair_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/game_pair_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/spacing_m"
+        android:max="100"
+        app:indicatorColor="@color/trophy_gold"
+        app:layout_constraintBottom_toTopOf="@id/game_controls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/navy_700"
+        app:trackCornerRadius="3dp"
+        app:trackThickness="@dimen/pair_progress_height" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/game_controls"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/float_bar_height"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/float_bar_margin"
+        app:cardBackgroundColor="@color/surface_card"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="@dimen/elevation_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/light_stroke"
+        app:strokeWidth="@dimen/stroke_hairline">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_undo"
+                style="@style/Widget.App.Button.Floating"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/btn_undo"
+                app:icon="@drawable/ic_undo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_hint_button"
+                style="@style/Widget.App.Button.Floating"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/btn_hint"
+                app:icon="@drawable/ic_hint" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_reset"
+                style="@style/Widget.App.Button.Floating"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/btn_reset"
+                app:icon="@drawable/ic_reset" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
